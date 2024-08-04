@@ -8,8 +8,12 @@ jobs:
     - uses: actions/setup-python@v5
       with:
         python-version: '3.12' 
-
     - name: Run pytest
-      run: |
-        pytest
-
+      uses: pavelzw/pytest-action@v2
+      with:
+        verbose: true
+        emoji: true
+        job-summary: true
+        custom-arguments: '-q'
+        click-to-expand: true
+        report-title: 'Test Report'
