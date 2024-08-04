@@ -1,7 +1,11 @@
 
 
+
+
+
 def macaco():
     print("macaco")
+
 
 
 
@@ -11,6 +15,7 @@ This script prompts the user for input and prints the provided input.
 It serves as a basic example of reading from standard input and output in Python.
 """
 
+
 def main():
     """
     Main function that handles user input and prints it.
@@ -19,6 +24,7 @@ def main():
     """
     a = input("Please enter a value: ")
     print(a)
+
 
 if __name__ == "__main__":
     main()
