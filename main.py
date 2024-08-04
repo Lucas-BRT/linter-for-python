@@ -2,6 +2,10 @@ def macaco():
     print("macaco")
 
 
+def orangotango():
+    print("orangotango")
+
+
 """
 This script prompts the user for input and prints the provided input.
 
