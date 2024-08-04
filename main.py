@@ -1,3 +1,10 @@
+
+
+def macaco():
+    print("macaco")
+
+
+
 """
 This script prompts the user for input and prints the provided input.
 
