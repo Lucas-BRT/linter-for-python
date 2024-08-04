@@ -23,24 +23,20 @@ jobs:
     - name: Run linter
       run: |
         pyflakes .
-      
+
     - name: Run formatter
       run: |
         black .
 
-    - name: Check if there are changes
-      id: check_changes
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git add .
-        git diff --cached --quiet || echo "Changes detected"
+    - name: Add and commit changes
+      uses: EndBug/add-and-commit@v9
+      with:
+        author_name: 'github-actions[bot]'
+        author_email: 'github-actions[bot]@users.noreply.github.com'
+        message: 'Autoformatted code with black'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Commit and push changes
-      if: steps.check_changes.outputs.changes_detected == 'Changes detected'
-      run: |
-        git commit -m "Autoformatted code"
-        git push
 
 
 
