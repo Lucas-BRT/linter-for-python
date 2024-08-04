@@ -1,5 +1,5 @@
 def main():
-    a = input("Please enter a value: ")
+    a = "Please enter a value: "
     print(a)
 
 
