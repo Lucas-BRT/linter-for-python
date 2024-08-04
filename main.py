@@ -1,7 +1,5 @@
 
 
-
-
 def macaco():
     print("macaco")
 
