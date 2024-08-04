@@ -28,7 +28,7 @@ jobs:
 
       - name: Build executable
         run: |
-          pyinstaller --onefile --name "My App" build.spec
+          pyinstaller build.spec
 
       - name: Upload executable
         uses: actions/upload-artifact@v3
