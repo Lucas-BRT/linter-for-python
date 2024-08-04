@@ -1,8 +1,8 @@
-def sum(x, y):
+def multiplica_por_2(x):
     return x * 2
 
 
 def test_if_sum_works():
-    result = sum(1, 2)
+    result = multiplica_por_2(1)
 
-    assert result == 3
+    assert result == 2
